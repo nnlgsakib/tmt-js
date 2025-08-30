@@ -1,8 +1,8 @@
-# tmt-js
+# tmt-ts
 
 Ternary Mesh Tree (TMT) for JavaScript/TypeScript — a compact, update‑friendly, BLAKE3‑based authenticated data structure. Use it to build Merkle‑like trees with ternary fan‑out (up to 3 children per node), generate and verify compact proofs, perform fast incremental updates, collect metrics, and serialize/deserialize to JSON.
 
-This README documents the npm package as `tmt-js`.
+This README documents the npm package as `tmt-ts`.
 
 ## Why TMT?
 
@@ -17,11 +17,11 @@ This README documents the npm package as `tmt-js`.
 ## Installation
 
 ```bash
-npm install tmt-js
+npm install tmt-ts
 # or
-yarn add tmt-js
+yarn add tmt-ts
 # or
-pnpm add tmt-js
+pnpm add tmt-ts
 ```
 
 Node 16+ recommended. The library targets browsers and Node; actual parallelism of hashing depends on the `blake3` implementation for your environment.
@@ -29,7 +29,7 @@ Node 16+ recommended. The library targets browsers and Node; actual parallelism 
 ## Quick Start
 
 ```ts
-import TernaryMeshTree, { hashToHex } from 'tmt-js';
+import TernaryMeshTree, { hashToHex } from 'tmt-ts';
 
 const enc = new TextEncoder();
 const blocks = [enc.encode('block1'), enc.encode('block2'), enc.encode('block3')];
@@ -187,7 +187,7 @@ Methods (TernaryMeshTree):
 ESM imports (Node ≥16 or bundlers):
 
 ```ts
-import TernaryMeshTree, { defaultConfig, computeHash, hashToHex } from 'tmt-js';
+import TernaryMeshTree, { defaultConfig, computeHash, hashToHex } from 'tmt-ts';
 
 const enc = new TextEncoder();
 const cfg = defaultConfig();
@@ -224,7 +224,7 @@ console.log('same root after deserialize?', !!r1 && !!r2 && hashToHex(r1!) === h
 CommonJS (Node require):
 
 ```js
-const { default: TernaryMeshTree, defaultConfig, hashToHex } = require('tmt-js');
+const { default: TernaryMeshTree, defaultConfig, hashToHex } = require('tmt-ts');
 const { TextEncoder } = require('util');
 
 const enc = new TextEncoder();
@@ -244,7 +244,7 @@ await t.batchUpdate(updates);
 Working with raw hashes:
 
 ```ts
-import { computeHash, combineHashes, hashToHex } from 'tmt-js';
+import { computeHash, combineHashes, hashToHex } from 'tmt-ts';
 
 const h = computeHash(new Uint8Array([1,2,3]));
 console.log(hashToHex(h));
