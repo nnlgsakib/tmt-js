@@ -31,16 +31,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "tmt-ts",
+  "name": "tmt-js",
   "author": "nnlgsakib",
-  "module": "dist/tmt-ts.esm.js",
+  "module": "dist/tmt-js.esm.js",
   "size-limit": [
     {
-      "path": "dist/tmt-ts.cjs.production.min.js",
+      "path": "dist/tmt-js.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/tmt-ts.esm.js",
+      "path": "dist/tmt-js.esm.js",
       "limit": "10 KB"
     }
   ],
